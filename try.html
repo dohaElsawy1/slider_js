@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Styled Form with Gender Validation</title>
+</head>
+<body>
+    <form action="#" method="post" id="myForm">
+        <label>Name: <input type="text" name="name" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="other" required> Other</label>
+        </fieldset>
+        <span id="genderError" class="error-message">Please select a gender</span>
+
+        <label>Message: <textarea name="message" rows="4" required></textarea></label>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            var maleRadio = document.querySelector('input[name="gender"][value="male"]');
+            var femaleRadio = document.querySelector('input[name="gender"][value="female"]');
+            var genderError = document.getElementById('genderError');
+            
+            if (!(maleRadio.checked || femaleRadio.checked)) {
+                genderError.style.display = 'block';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                genderError.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    Name
+    <input type="text" id="name1">
+    <br><span> Name is required </span>
+    <br><br> 
+    Email
+    <input type="email" id="email">
+    <br><span>Email is not valid </span> 
+    <br><br>
+    Password 
+    <input type="password" id="password">
+    <br> <span> Password must be atleast 8 characters</span>
+    <br><br>
+    Gender
+     <input type="radio" name="gender" value="male" id="male">male
+     <input type="radio" name="gender" value="female" id="female">female
+     <br><span> Plaease select your gender </span>
+    <br><br>
+    Sports 
+     <input type="checkbox" name="Sports" value="Tennis" id="tennis">Tennis
+     <input type="checkbox" name="Sports" value="Running" id="running">Running
+     <input type="checkbox" name="Sports" value="Football"id="football">Football
+     <br><span> Plaease select at least two sports </span>
+    <br><br>
+    <input type="submit" value="submit" onclick="submit()">
+    <!-- ------------------>
+
+    <div> 
+    <img src="./imgs/3.jpeg"><br>
+    <button onclick="previous()">  <  </button>
+    <button id="nextbtn" onclick="playSlider()"> play </button>
+    <button id="nextbtn" onclick="stopSlider()"> stop </button>
+    <button onclick="next()"> ></button>
+ 
+    
+</div>
+
+
+<script src="./demo.js"></script>
+</body>
+</html>
